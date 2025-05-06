@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
               navigate("/news");
             }}
           >
-            Sussurri Vaticani
+            Voci dal Vaticano
           </a>
         </div>
       </div>
