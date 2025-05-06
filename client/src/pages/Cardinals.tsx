@@ -19,7 +19,7 @@ const Cardinals: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <section id="cardinals" className="mb-16 scroll-mt-20">
         <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-cinzel text-cardinal-red">Candidati Cardinali</h2>
+          <h2 className="text-3xl font-cinzel text-cardinal-red">Top Players</h2>
           
           {user && (
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
