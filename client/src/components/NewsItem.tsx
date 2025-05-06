@@ -14,34 +14,42 @@ interface NewsItemProps {
 const NewsItem: React.FC<NewsItemProps> = ({ news }) => {
   const getCategoryLabel = (category: string) => {
     const categories: Record<string, string> = {
-      "hot-gossip": "Hot Gossip",
-      "innovation": "Innovation",
-      "entertainment": "Entertainment",
-      "controversy": "Controversy",
-      "miracle": "Miracle"
+      "hot-gossip": "Gossip",
+      innovation: "Illuminazioni",
+      entertainment: "Atti divini",
+      controversy: "Atti diabolici",
+      miracle: "Miracoli",
     };
     return categories[category] || category;
   };
-  
+
   const getCategoryColor = (category: string) => {
     const colors: Record<string, string> = {
-      "hot-gossip": "bg-cardinal-red bg-opacity-20 text-cardinal-red",
-      "innovation": "bg-vatican-gold bg-opacity-20 text-vatican-gold",
-      "entertainment": "bg-papal-purple bg-opacity-20 text-papal-purple",
-      "controversy": "bg-cardinal-red bg-opacity-20 text-cardinal-red",
-      "miracle": "bg-green-600 bg-opacity-20 text-green-600"
+      "hot-gossip": "bg-cardinal-red bg-opacity-20 text-white",
+      innovation: "bg-vatican-gold bg-opacity-20 text-white",
+      entertainment: "bg-papal-purple bg-opacity-20 text-white",
+      controversy: "bg-cardinal-red bg-opacity-20 text-white",
+      miracle: "bg-green-600 bg-opacity-20 text-white",
     };
-    return colors[category] || "bg-gray-200 text-gray-800";
+    return colors[category] || "bg-gray-200 text-white";
   };
-  
-  const timeAgo = news.createdAt ? formatDistanceToNow(new Date(news.createdAt), { addSuffix: true }) : "recently";
+
+  const timeAgo = news.createdAt
+    ? formatDistanceToNow(new Date(news.createdAt), { addSuffix: true })
+    : "recently";
 
   return (
     <article className="border-b border-gray-200 pb-6">
-      <h3 className="text-xl font-cinzel text-papal-purple mb-2">{news.title}</h3>
+      <h3 className="text-xl font-cinzel text-papal-purple mb-2">
+        {news.title}
+      </h3>
       <div className="flex items-center mb-3">
-        <span className="text-xs text-gray-500 font-lora">Posted anonymously • {timeAgo}</span>
-        <span className={`ml-2 px-2 py-1 ${getCategoryColor(news.category)} text-xs rounded-full`}>
+        <span className="text-xs text-gray-500 font-lora">
+          Posted anonymously • {timeAgo}
+        </span>
+        <span
+          className={`ml-2 px-2 py-1 ${getCategoryColor(news.category)} text-xs rounded-full`}
+        >
           {getCategoryLabel(news.category)}
         </span>
       </div>
