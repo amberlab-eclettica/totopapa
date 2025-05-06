@@ -40,8 +40,8 @@ const CardinalCard: React.FC<CardinalCardProps> = ({ cardinal, refetch }) => {
       });
       
       toast({
-        title: "Vote Cast",
-        description: `You voted for ${cardinal.name}!`,
+        title: "Amen, fratello!",
+        description: `Hai votato per ${cardinal.name}!`,
       });
       
       // Invalidate queries to refresh data
@@ -50,8 +50,8 @@ const CardinalCard: React.FC<CardinalCardProps> = ({ cardinal, refetch }) => {
       refetch();
     } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to cast vote. Please try again.",
+        title: "Errore",
+        description: "Il signore non ha sentito la tua preghiera, fratello. Prega più forte.",
         variant: "destructive"
       });
     } finally {
