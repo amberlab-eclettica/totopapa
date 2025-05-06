@@ -99,11 +99,11 @@ const NewsForm: React.FC<NewsFormProps> = ({ onSuccess }) => {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="hot-gossip">Gossip Piccante</SelectItem>
-                  <SelectItem value="innovation">Innovazione</SelectItem>
-                  <SelectItem value="entertainment">Intrattenimento</SelectItem>
-                  <SelectItem value="controversy">Controversia</SelectItem>
-                  <SelectItem value="miracle">Miracolo</SelectItem>
+                  <SelectItem value="hot-gossip">Gossip</SelectItem>
+                  <SelectItem value="innovation">Illuminazioni</SelectItem>
+                  <SelectItem value="entertainment">Atti divini</SelectItem>
+                  <SelectItem value="controversy">Atti diabolici</SelectItem>
+                  <SelectItem value="miracle">Miracoli</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
