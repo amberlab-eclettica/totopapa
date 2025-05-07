@@ -153,8 +153,11 @@ const StatisticsDisplay: React.FC<StatisticsDisplayProps> = ({ stats }) => {
                     {stats.recentVotes.map((vote) => (
                       <li key={vote.id} className="p-3 hover:bg-gray-50">
                         <p className="font-lora text-sm">
-                          <span className="font-semibold">{vote.userName}</span>{", "}
-                          <span className="font-semibold">{vote.userTitle}
+                          <span className="font-semibold">{vote.userName}</span>
+                          {", "}
+                          <span className="font-semibold">
+                            {vote.userTitle}
+                          </span>{" "}
                           ha votato per{" "}
                           <span className="text-cardinal-red">
                             {vote.cardinalName}
